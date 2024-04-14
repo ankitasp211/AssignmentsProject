@@ -10,39 +10,12 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"src/test/resources/featurefiles"},
         glue = {"stepdefinition"},
-        tags = "@Module2Assignment2",
-        plugin={ "pretty",
+        tags = "@Module3Assignment5",
+        plugin= {"pretty",
                 "html:target/test-report/report.html",
                 "json:target/test-report/report.json",
-                "junit:target/test-report/report.junit",
-
-
-        }
+                "junit:target/test-report/report.junit"}
 )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 public class Runner {
 }

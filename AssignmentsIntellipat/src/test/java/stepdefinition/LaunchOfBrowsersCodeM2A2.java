@@ -1,5 +1,6 @@
 package stepdefinition;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -22,20 +23,23 @@ public class LaunchOfBrowsersCodeM2A2 extends BaseCode {
 
 
     @When("User waits for specific time of {int} sec")
-    public void waitTime(int arg0)
-    {
-          driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(arg0));
-    }
+    public void waitTime(int arg0) throws InterruptedException {
+//          driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(arg0));
+        Thread.sleep(5000);
+   }
 
-    @Then("User validates the title of the google page and closes the browser")
+    @Then("User validates the title of the google page")
     public void validateTheTitleAndClosesTheBrowser() throws Exception {
-            String title = driver.getTitle();
+        String title = driver.getTitle();
         System.out.println(title);
-        Assert.assertEquals("Google",title);
+        Assert.assertEquals("Google", title);
         System.out.println("The titles are equal");
-         driver.close();
-
 
 
     }
-}
+
+
+
+        }
+
+

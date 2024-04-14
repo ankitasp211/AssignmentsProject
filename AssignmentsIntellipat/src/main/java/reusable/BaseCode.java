@@ -13,10 +13,11 @@ import java.util.Properties;
 
 public class BaseCode {
     public static WebDriver driver;
+    public static Properties prob;
     public static void browserInvocation() throws IOException {
         File f= new File("src/main/resources/configuration/config.properties");
         FileInputStream fis = new FileInputStream(f);
-        Properties prob = new Properties();
+        prob = new Properties();
         prob.load(fis);
         if (prob.getProperty("browser").equalsIgnoreCase("Chrome"))
         {
@@ -24,13 +25,14 @@ public class BaseCode {
         }
         else if (prob.getProperty("browser").equalsIgnoreCase("Edge"))
         {
-         WebDriver driver = new EdgeDriver();
+          driver = new EdgeDriver();
         }
 
         else
             throw new InvalidArgumentException("Please enter valid browser");
 
         driver.get(prob.getProperty("environment"));
+
     }
 
 
