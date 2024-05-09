@@ -22,19 +22,15 @@ public class HooksCode extends BaseCode {
         BaseCode.browserInvocation();
         System.out.println("Browser is launched");
     }
-
     @BeforeStep
     public void beforeStep() {
         System.out.println("Before Step is executed");
     }
-
     @After
     public void tearDown() {
         System.out.println("the browser is closed");
         driver.quit();
-
     }
-
     @AfterStep
     public void screenshot(Scenario sc) {
         byte[] byteImage = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);

@@ -16,6 +16,8 @@ Scenario: To automate Oracle registration page
     #before
   #beforestep
   Given User enters registration details for oracle page
+  #afterstep
+  #after
 
   @Module4Assignment3
   Scenario: To automate facebook registration page using Absolute xpath

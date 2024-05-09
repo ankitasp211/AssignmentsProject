@@ -78,7 +78,7 @@ public class BrowserAutomationM3 extends BaseCode {
         {
             Assert.assertTrue(true);
             System.out.println("the urls are same");
-        } else
+        }else
         {
             Assert.fail();
             System.out.println("the urls aren't same");
@@ -89,6 +89,7 @@ public class BrowserAutomationM3 extends BaseCode {
     @When("User navigates to test url {string}")
     public void navigationToUrl(String arg0) throws InterruptedException {
         driver.navigate().to(arg0);
+        Thread.sleep(3000);
     }
 
     @And("User refreshes the current page")
@@ -97,21 +98,25 @@ public class BrowserAutomationM3 extends BaseCode {
     }
 
     @And("User navigates back")
-    public void navigatingBackToTestUrl() throws InterruptedException
+    public void testBack() throws InterruptedException
     {
-       driver.navigate().back();
+      // driver.navigate().back();
+       driver.navigate().refresh();
+       Thread.sleep(2000);
     }
 
     @And("User navigates forward")
-    public void navigatingForwardToTestUrl() throws InterruptedException {
+    public void testForward() throws InterruptedException {
         driver.navigate().forward();
 
     }
 
     @And("User gets the url of the page")
-    public void getTheUrlOfThePage() {
-        System.out.println(driver.getCurrentUrl());
+    public void xyz() {
+     String text1= driver.getCurrentUrl();
+      System.out.println(text1);
     }
 }
+
 
 

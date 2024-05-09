@@ -1,8 +1,7 @@
 Feature: Browser Automation
 
-  @Module3Assignment1
+  @Module3Assignment1 @Regression
   Scenario:Switching between the windows
-
     #before
   #beforestep
   Given User maximises the window
@@ -14,8 +13,7 @@ Feature: Browser Automation
     Then User validates the title of the page
   #afterstep
   #after
-
-  @Module3Assignment5
+  @Module3Assignment5 @Regression
   Scenario:Switching the urls
     #before
   #beforestep

@@ -13,7 +13,8 @@ import java.io.IOException;
 
 public class ReadExcelData {
 
-    public static String excelData(String sheetName, int rowIndex, int columnIndex) throws IOException {
+    public static String
+    excelData(String sheetName, int rowIndex, int columnIndex) throws IOException {
         File f = new File("src/main/resources/testdata/testdataforfb.xlsx");
         FileInputStream fis = new FileInputStream(f);
         XSSFWorkbook workbook = new XSSFWorkbook(fis);

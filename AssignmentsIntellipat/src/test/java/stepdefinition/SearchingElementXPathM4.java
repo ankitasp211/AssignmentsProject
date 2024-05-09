@@ -27,12 +27,6 @@ public class SearchingElementXPathM4 extends BaseCode {
         SignUpPageFB.clickSignUp();
     }
         @Then("User validates that the account is created")
-
-
-
-
-
-
         public static void validateAccountCreation()
         {
             HomePageFB.titleOfPage();     }
